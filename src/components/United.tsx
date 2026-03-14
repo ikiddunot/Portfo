@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import Divider from './Divider';
 import FloatingStar from './FloatingStar';
-import img4 from '../assets/4.png';
 import img5 from '../assets/5.png';
 
 export default function United() {
@@ -21,73 +20,77 @@ export default function United() {
           United We Stand
         </motion.h2>
         
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mb-10"
-        >
-          <img src={img4} alt="United We Stand" className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
-        </motion.div>
-        
-        <h3 className="text-3xl font-display font-bold mb-6 text-campaign-blue uppercase">The Right to Vote Is Powerful</h3>
-        
-        <div className="space-y-6 text-lg leading-relaxed font-medium text-slate-800">
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+        <div className="flex flex-col md:flex-row gap-10 items-start">
+          <div className="w-full md:w-1/2">
+            <h3 className="text-3xl font-display font-bold mb-6 text-campaign-blue uppercase">The Right to Vote Is Powerful</h3>
+            
+            <div className="space-y-6 text-lg leading-relaxed font-medium text-slate-800">
+              <motion.p 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                The right to vote is one of the most important freedoms we have as Americans. But history reminds us that it did not begin equally for everyone. Over time, through struggle, courage, and perseverance, more Americans were included in that right. That progress is something worth remembering and protecting.
+              </motion.p>
+              
+              <motion.p 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                Voting is not just about casting a ballot. It is about participating in our democracy and having a voice in the future of our communities and our country.
+              </motion.p>
+              
+              <motion.p 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                At the same time, respecting the right to vote also means respecting how others choose to vote. Democracy only works when we allow people the freedom to think differently, choose differently, and still stand together as fellow Americans.
+              </motion.p>
+              
+              <motion.p 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                We may not always agree on candidates, policies, or parties—but we should always agree on this:
+              </motion.p>
+              
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="bg-campaign-gray p-6 border-l-8 border-campaign-red my-8 shadow-md"
+              >
+                <span className="font-display font-bold text-campaign-red text-3xl uppercase tracking-wide block">Every citizen has the right to vote according to their conscience.</span>
+              </motion.div>
+              
+              <motion.p 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              >
+                When we value that freedom for ourselves and for others, we strengthen our democracy.
+              </motion.p>
+            </div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
+            className="w-full md:w-1/2 shrink-0"
           >
-            The right to vote is one of the most important freedoms we have as Americans. But history reminds us that it did not begin equally for everyone. Over time, through struggle, courage, and perseverance, more Americans were included in that right. That progress is something worth remembering and protecting.
-          </motion.p>
-          
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            Voting is not just about casting a ballot. It is about participating in our democracy and having a voice in the future of our communities and our country.
-          </motion.p>
-          
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            At the same time, respecting the right to vote also means respecting how others choose to vote. Democracy only works when we allow people the freedom to think differently, choose differently, and still stand together as fellow Americans.
-          </motion.p>
-          
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            We may not always agree on candidates, policies, or parties—but we should always agree on this:
-          </motion.p>
-          
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-campaign-gray p-6 border-l-8 border-campaign-red my-8 shadow-md"
-          >
-            <span className="font-display font-bold text-campaign-red text-3xl uppercase tracking-wide block">Every citizen has the right to vote according to their conscience.</span>
+            <img src={img5} alt="United We Stand" className="w-full h-auto rounded-sm object-cover shadow-lg" referrerPolicy="no-referrer" />
           </motion.div>
-          
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            When we value that freedom for ourselves and for others, we strengthen our democracy.
-          </motion.p>
         </div>
         
         <Divider />
@@ -102,16 +105,6 @@ export default function United() {
           <p className="text-6xl md:text-8xl font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-campaign-blue via-campaign-red to-campaign-blue uppercase tracking-widest drop-shadow-sm bg-[length:200%_auto] animate-[gradient_3s_linear_infinite]">
             United We Stand
           </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16"
-        >
-          <img src={img5} alt="United We Stand" className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
         </motion.div>
       </div>
     </section>

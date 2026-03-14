@@ -7,6 +7,29 @@ export default function Hero() {
     <section id="home" className="relative bg-campaign-blue text-campaign-white pt-32 pb-24 px-6 text-center overflow-hidden">
       <div className="absolute inset-0 bg-stars animate-stars"></div>
       
+      {/* Faded Waving American Flag Background */}
+      <motion.div
+        className="absolute inset-0 z-0 pointer-events-none opacity-20 mix-blend-overlay"
+        animate={{
+          scale: [1.05, 1.15, 1.05],
+          rotate: [-1, 1, -1],
+          x: [-15, 15, -15],
+          y: [-10, 10, -10]
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+          alt="American Flag Background"
+          className="w-full h-full object-cover"
+          referrerPolicy="no-referrer"
+        />
+      </motion.div>
+      
       {/* Floating American Elements */}
       <FloatingStar top="10%" left="10%" size={64} colorClass="text-campaign-red" opacityRange={[0.1, 0.3, 0.1]} duration={5} />
       <FloatingStar bottom="10%" right="10%" size={80} colorClass="text-campaign-white" opacityRange={[0.05, 0.2, 0.05]} duration={6} delay={1} />

@@ -26,59 +26,61 @@ export default function Events() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 bg-campaign-gray p-8 rounded-sm shadow-xl border-t-8 border-campaign-blue relative"
+          className="mb-16 bg-campaign-gray p-8 rounded-sm shadow-xl border-t-8 border-campaign-blue relative flex flex-col md:flex-row gap-8"
         >
-          <h3 className="text-4xl font-display font-bold mb-2 text-campaign-red uppercase">Respect the Vote</h3>
-          <p className="text-xl font-bold mb-6 text-slate-600 uppercase tracking-wider">May 8, 2026</p>
-          
-          <p className="text-lg leading-relaxed mb-6 font-medium text-slate-800">
-            Join Damita Bishop for "Respect the Vote," a community event designed to empower voters, share information about the upcoming elections, and create a space for open discussion about the issues that matter most.
-          </p>
-          
-          <div className="bg-white p-6 rounded-sm mb-8 border-l-4 border-campaign-red shadow-md transform hover:scale-[1.01] transition-transform">
-            <p className="font-bold text-lg"><span className="text-campaign-red uppercase mr-2">When:</span> Saturday, May 8, 2026</p>
-            <p className="font-bold text-lg"><span className="text-campaign-red uppercase mr-2">Where:</span> [Insert Location / Virtual Zoom Link]</p>
-            <p className="font-bold text-lg"><span className="text-campaign-red uppercase mr-2">Time:</span> [Insert Time]</p>
-          </div>
-          
-          <h4 className="text-2xl font-display font-bold mb-4 uppercase">What to Expect</h4>
-          <ul className="space-y-3 mb-8">
-            {[
-              "Learn about the primary and general election dates and deadlines in Georgia",
-              "Understand your voter registration options and how to make your voice count",
-              "Discuss key issues like healthcare, criminal justice reform, education, housing, and economic opportunity",
-              "Ask questions, share your opinions, and engage directly with Damita Bishop"
-            ].map((item, i) => (
-              <motion.li 
-                key={i} 
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.1 * i }}
-                className="flex items-start"
-              >
-                <span className="text-campaign-red mr-3 font-bold text-xl leading-none">★</span>
-                <span className="text-lg font-medium text-slate-800">{item}</span>
-              </motion.li>
-            ))}
-          </ul>
-          
-          <p className="text-lg leading-relaxed mb-6 font-medium text-slate-800">
-            This event is open to all voters and candidates. Our goal is to build understanding, awareness, and unity so that every voter feels informed and empowered to participate in the democratic process.
-          </p>
-          
-          <div className="bg-campaign-red text-white p-4 text-center font-bold text-xl uppercase tracking-wide shadow-md hover:bg-red-800 transition-colors cursor-pointer">
-            RSVP today to reserve your spot and help us spread the word about the importance of voting!
+          <div className="flex-1">
+            <h3 className="text-4xl font-display font-bold mb-2 text-campaign-red uppercase">Respect the Vote</h3>
+            <p className="text-xl font-bold mb-6 text-slate-600 uppercase tracking-wider">May 8, 2026</p>
+            
+            <p className="text-lg leading-relaxed mb-6 font-medium text-slate-800">
+              Join Damita Bishop for "Respect the Vote," a community event designed to empower voters, share information about the upcoming elections, and create a space for open discussion about the issues that matter most.
+            </p>
+            
+            <div className="bg-white p-6 rounded-sm mb-8 border-l-4 border-campaign-red shadow-md transform hover:scale-[1.01] transition-transform">
+              <p className="font-bold text-lg"><span className="text-campaign-red uppercase mr-2">When:</span> Saturday, May 8, 2026</p>
+              <p className="font-bold text-lg"><span className="text-campaign-red uppercase mr-2">Where:</span> [Insert Location / Virtual Zoom Link]</p>
+              <p className="font-bold text-lg"><span className="text-campaign-red uppercase mr-2">Time:</span> [Insert Time]</p>
+            </div>
+            
+            <h4 className="text-2xl font-display font-bold mb-4 uppercase">What to Expect</h4>
+            <ul className="space-y-3 mb-8">
+              {[
+                "Learn about the primary and general election dates and deadlines in Georgia",
+                "Understand your voter registration options and how to make your voice count",
+                "Discuss key issues like healthcare, criminal justice reform, education, housing, and economic opportunity",
+                "Ask questions, share your opinions, and engage directly with Damita Bishop"
+              ].map((item, i) => (
+                <motion.li 
+                  key={i} 
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.1 * i }}
+                  className="flex items-start"
+                >
+                  <span className="text-campaign-red mr-3 font-bold text-xl leading-none">★</span>
+                  <span className="text-lg font-medium text-slate-800">{item}</span>
+                </motion.li>
+              ))}
+            </ul>
+            
+            <p className="text-lg leading-relaxed mb-6 font-medium text-slate-800">
+              This event is open to all voters and candidates. Our goal is to build understanding, awareness, and unity so that every voter feels informed and empowered to participate in the democratic process.
+            </p>
+            
+            <div className="bg-campaign-red text-white p-4 text-center font-bold text-xl uppercase tracking-wide shadow-md hover:bg-red-800 transition-colors cursor-pointer">
+              RSVP today to reserve your spot and help us spread the word about the importance of voting!
+            </div>
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-8"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-full md:w-1/3 shrink-0"
           >
-            <img src={img7} alt="Respect the Vote Event" className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
+            <img src={img7} alt="Respect the Vote Event" className="w-full h-auto rounded-sm object-cover shadow-lg" referrerPolicy="no-referrer" />
           </motion.div>
         </motion.div>
 
