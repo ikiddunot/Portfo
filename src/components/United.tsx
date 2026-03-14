@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import Divider from './Divider';
 import FloatingStar from './FloatingStar';
+import img4 from '../assets/4.png';
+import img5 from '../assets/5.png';
 
 export default function United() {
   return (
@@ -26,7 +28,7 @@ export default function United() {
           transition={{ duration: 0.5 }}
           className="mb-10"
         >
-          <img src="4.png" alt="United We Stand" className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
+          <img src={img4} alt="United We Stand" className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
         </motion.div>
         
         <h3 className="text-3xl font-display font-bold mb-6 text-campaign-blue uppercase">The Right to Vote Is Powerful</h3>
@@ -109,7 +111,7 @@ export default function United() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16"
         >
-          <img src="5.png" alt="United We Stand" className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
+          <img src={img5} alt="United We Stand" className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
         </motion.div>
       </div>
     </section>

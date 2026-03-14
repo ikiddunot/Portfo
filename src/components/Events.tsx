@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 import FloatingStar from './FloatingStar';
+import img7 from '../assets/7.jpg';
+import img8 from '../assets/8.jpg';
 
 export default function Events() {
   return (
@@ -76,7 +78,7 @@ export default function Events() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="mt-8"
           >
-            <img src="7.jpg" alt="Respect the Vote Event" className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
+            <img src={img7} alt="Respect the Vote Event" className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
           </motion.div>
         </motion.div>
 
@@ -133,7 +135,7 @@ export default function Events() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="mt-8"
           >
-            <img src="8.jpg" alt="Freedom Fest Event" className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
+            <img src={img8} alt="Freedom Fest Event" className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
           </motion.div>
         </motion.div>
       </div>

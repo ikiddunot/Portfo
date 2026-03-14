@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import Divider from './Divider';
 import FloatingStar from './FloatingStar';
+import img3 from '../assets/3.png';
 
 export default function Fair() {
   return (
@@ -33,7 +34,7 @@ export default function Fair() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="w-full md:w-1/3 shrink-0"
           >
-            <img src="3.png" alt="About F.A.I.R." className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
+            <img src={img3} alt="About F.A.I.R." className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
           </motion.div>
         </div>
 

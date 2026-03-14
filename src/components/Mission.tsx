@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import FloatingStar from './FloatingStar';
+import img2 from '../assets/2.png';
 
 export default function Mission() {
   return (
@@ -40,7 +41,7 @@ export default function Mission() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <img
-              src="2.png"
+              src={img2}
               alt="Damita Bishop Mission"
               className="w-full h-auto rounded-sm shadow-2xl border-8 border-campaign-white object-cover"
               referrerPolicy="no-referrer"

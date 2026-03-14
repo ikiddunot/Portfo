@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import Divider from './Divider';
 import FloatingStar from './FloatingStar';
+import img9 from '../assets/9.png';
+import img6 from '../assets/6.png';
 
 export default function Issues() {
   const issues = [
@@ -139,7 +141,7 @@ export default function Issues() {
           transition={{ duration: 0.6, delay: 0.55 }}
           className="mb-12"
         >
-          <img src="9.png" alt="Public Safety Priority" className="w-full h-auto rounded-sm object-cover shadow-lg" referrerPolicy="no-referrer" />
+          <img src={img9} alt="Public Safety Priority" className="w-full h-auto rounded-sm object-cover shadow-lg" referrerPolicy="no-referrer" />
         </motion.div>
         
         <Divider />
@@ -162,7 +164,7 @@ export default function Issues() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="mt-16"
         >
-          <img src="6.png" alt="Damita Bishop Campaign" className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
+          <img src={img6} alt="Damita Bishop Campaign" className="w-full h-auto rounded-sm object-cover" referrerPolicy="no-referrer" />
         </motion.div>
       </div>
     </section>

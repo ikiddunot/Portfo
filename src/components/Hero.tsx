@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import FloatingStar from './FloatingStar';
+import img1 from '../assets/1.png';
 
 export default function Hero() {
   return (
@@ -17,7 +18,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          src="1.png"
+          src={img1}
           alt="Damita Bishop for Georgia State Representative"
           className="mx-auto mb-10 rounded-sm shadow-2xl border-8 border-campaign-white max-w-full h-auto object-cover"
           referrerPolicy="no-referrer"
