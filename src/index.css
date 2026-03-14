@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-campaign-blue: #0A3161; /* Deeper, more vibrant navy */
+  --color-campaign-red: #B31942; /* Classic American flag red */
+  --color-campaign-white: #FFFFFF;
+  --color-campaign-gray: #F4F5F7;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Oswald", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer utilities {
+  .bg-stars {
+    background-image: radial-gradient(#B31942 1px, transparent 1px), radial-gradient(#B31942 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    opacity: 0.05;
+  }
+  .bg-stripes {
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(10, 49, 97, 0.03) 10px,
+      rgba(10, 49, 97, 0.03) 20px
+    );
+  }
+  
+  @keyframes slide-stars {
+    0% { background-position: 0 0, 20px 20px; }
+    100% { background-position: 40px 40px, 60px 60px; }
+  }
+  @keyframes slide-stripes {
+    0% { background-position: 0 0; }
+    100% { background-position: 42px 0; }
+  }
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .animate-stars {
+    animation: slide-stars 15s linear infinite;
+  }
+  .animate-stripes {
+    animation: slide-stripes 8s linear infinite;
+  }
+}
